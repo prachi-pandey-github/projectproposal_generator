@@ -5,7 +5,7 @@ class GeminiAPI:
     def __init__(self):
         self.api_key = st.secrets["gemini"]["api_key"]
         self.model = st.secrets["gemini"]["model"]
-        self.base_url = "gemini-2.0-flash-thinking-exp-01-21" # Update this if Gemini's actual API URL is different
+        self.base_url = "https://gemini-2.0-flash-thinking-exp-01-21" # Update this if Gemini's actual API URL is different
 
     def generate_proposal(self, client_requirements):
         endpoint = f"{self.base_url}/generate_proposal"
