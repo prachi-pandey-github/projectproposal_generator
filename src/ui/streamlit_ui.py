@@ -12,7 +12,13 @@ def create_ui():
     if st.button("Generate Proposal"):
         if client_name and project_description:
             proposal_generator = ProposalGenerator(langchain_utils, gemini_api.GeminiAPI())
-            proposal = proposal_generator.generate_proposal(client_name, project_description, budget, deadline)
+            client_requirements = {
+                "client_name": client_name,
+                "description": project_description,
+                "budget": budget,
+                "deadline": str(deadline)
+            }
+            proposal = proposal_generator.generate_proposal(client_requirements)
             st.subheader("Generated Proposal")
             st.write(proposal)
         else:
