@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import google.generativeai as genai
 
 class GeminiAPI:
     def __init__(self):
