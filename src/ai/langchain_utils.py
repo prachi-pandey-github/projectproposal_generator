@@ -7,6 +7,9 @@ def process_client_requirements(requirements):
         "timeline": requirements.get("timeline"),
     }
     return processed_requirements
+def process_requirements(client_requirements):
+    # Example: just return the input for now, or add your processing logic
+    return client_requirements
 
 def format_for_langchain(processed_requirements):
     # Format the processed requirements for LangChain input
